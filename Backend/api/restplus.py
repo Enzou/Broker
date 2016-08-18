@@ -2,12 +2,15 @@ import logging
 import config as CONFIG
 
 from flask_restplus import Api
+from flask_marshmallow import Marshmallow
 
 log = logging.getLogger(__name__)
 
 
 api = Api(version='1.0', title='Broker API',
         description='A simple API for handling transactions')
+
+ma = Marshmallow()
 
 
 @api.errorhandler
